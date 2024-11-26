@@ -1,11 +1,25 @@
+* {
+  box-sizing: border-box; /* Maneja correctamente los márgenes y el ancho */
+}
 
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Elimina el scroll horizontal */
+  width: 100%; /* Asegura que no haya desbordamiento */
+}
 
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondo1.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Elimina el scroll horizontal */
+  width: 100%;
 }
+
 
 .lightning {
   text-shadow: 0 0 20px rgba(15, 175, 224, 0.91); /* Sombra de texto */
@@ -20,10 +34,53 @@ body {
   text-shadow: 0 0 24px rgba(15, 175, 224, 0.91); /* Sombra de texto */
 } 
 
+.text-display-h1-sm {
+  white-space: nowrap; 
+  font-weight: 700;
+  font-size: 1.7rem; /* Ajusta el tamaño según lo desees */
+  line-height: 1rem; /* Ajusta el interlineado según lo desees */
+  text-wrap: balance;
+  margin-top: 5rem;
+  text-shadow: 0 0 24px rgba(15, 175, 224, 0.91); 
+}
+
 
 .navbarShadow {
   box-shadow: 0px 4px 10px rgba(212, 14, 196, 0.9); 
 }
+
+/* En tu archivo css/styles.css */
+
+.navbar-nav .nav-link {
+  position: relative; /* Necesario para posicionar el elemento pseudo ::before */
+  color: white; /* Color del texto por defecto */
+  text-decoration: none; /* Quita la decoración por defecto de los enlaces */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #57c9e6; /* Cambia el color del texto al pasar el cursor (ajusta el color violeta) */
+}
+
+.navbar-nav .nav-link::before {
+  content: ''; /* Necesario para crear el pseudo-elemento */
+  position: absolute;
+  bottom: -2px; /* Posiciona la línea debajo del texto */
+  left: 0;
+  width: 0; /* Inicialmente la línea tiene ancho 0 */
+  height: 2px; /* Altura de la línea */
+  background: linear-gradient(to right, #3095c4 0%, #b62496 50%, #eeb415 100%);
+  /*background-color: #dfa539;  Color violeta de la línea */
+  transition: width 0.7s ease; /* Transición suave del ancho */
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: 100%; /* Al pasar el cursor, la línea se expande al 100% del ancho */
+
+}
+
+
+
+
 
 .pIntro {
   font-family: 'Orbitron', sans-serif;
@@ -72,8 +129,6 @@ body {
   background-color: transparent; /* Fondo transparente para las cards */
   border: none; /* Sin borde */
 }
-
-
 
 .card-fx { /* Ajusta el nombre de la clase si es necesario */
   background-color: rgba(22, 19, 19, 0.7); /* Tu color gris actual */
