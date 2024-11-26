@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondo1.jpg"); 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero2.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -20,6 +20,15 @@ body {
   width: 100%;
 }
 
+.hero2 {
+  background-image: url("../images/hero2.jpg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 .lightning {
   text-shadow: 0 0 20px rgba(15, 175, 224, 0.91); /* Sombra de texto */
@@ -45,10 +54,26 @@ body {
 }
 
 
-.navbarShadow {
-  box-shadow: 0px 4px 10px rgba(212, 14, 196, 0.9); 
+
+
+.navbarShadow1 {
+  box-shadow: 0px 4px 10px rgba(34, 101, 177, 0.9);  
+  /*box-shadow: 0px 4px 10px rgba(212, 14, 196, 0.9);*/ 
 }
 
+.navbarShadow2 {
+  box-shadow: 0px 4px 10px rgba(138, 31, 150, 0.9);  
+  /*box-shadow: 0px 4px 10px rgba(212, 14, 196, 0.9);*/ 
+}
+
+.navbarShadow3 {  
+  box-shadow: 0px 4px 10px rgba(207, 19, 151, 0.9); 
+}
+
+.navbarShadow4 {
+  box-shadow: 0px 4px 10px rgba(236, 165, 11, 0.9);  
+  /*box-shadow: 0px 4px 10px rgba(212, 14, 196, 0.9);*/ 
+}
 /* En tu archivo css/styles.css */
 
 .navbar-nav .nav-link {
@@ -70,7 +95,7 @@ body {
   height: 2px; /* Altura de la línea */
   background: linear-gradient(to right, #3095c4 0%, #b62496 50%, #eeb415 100%);
   /*background-color: #dfa539;  Color violeta de la línea */
-  transition: width 0.7s ease; /* Transición suave del ancho */
+  transition: width 0.6s ease; /* Transición suave del ancho */
 }
 
 .navbar-nav .nav-link:hover::before {
